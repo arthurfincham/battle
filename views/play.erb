@@ -1,6 +1,6 @@
 <h1>Welcome <%= "#{@player1_name} & #{@player2_name}" %>!</h1>
 
-<h2><%= "#{@player2_name}: 50HP" %></h2>
+<h2><%= "#{@player2_name}: #{@player2_hp}HP" %></h2>
 <form action="/attack" method="get">
   <input type="submit" value="Attack">
 </form>
