@@ -1,6 +1,26 @@
-<h2><%= @game.player1.health_points %>HP: <%= @game.player1.name %> vs. <%= @game.player2.name %>: <%= @game.player2.health_points %>HP</h2><br>
+<div class="flex_row_center" id="play_box">
+  <div class="flex_col_center" id="player1_box">
+    <h3><%= @game.player1.name %></h3>
+    <div class="flex_row_center">
+      <i class="fas fa-skull-crossbones"></i>
+      <progress class="vertical" max="50" value="<%=@game.player1.health_points%>"></progress>
+      <i class="fas fa-heartbeat"></i>
+    </div>
+    <%= @game.player1.health_points %>HP
+  </div>
+  <div class="flex_col_center" id="player2_box">
+    <h3><%= @game.player2.name %></h3>
+    <div class="flex_row_center">
+      <i class="fas fa-heartbeat"></i>
+      <progress id="player2_progress" max="50" value="<%=@game.player2.health_points%>"></progress>
+      <i class="fas fa-skull-crossbones"></i>
+    </div>
+    <%= @game.player2.health_points %>HP
+  </div>
+</div>
 
 <h4><%= @game.current_turn.name %>'s turn<h4>
 <form action="/attack" method="post">
   <input type="submit" value="Attack">
 </form>
+

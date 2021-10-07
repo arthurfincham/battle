@@ -34,6 +34,7 @@ h2 {
 
 h3 {
   font-size: 1.953rem;
+  margin: 0 0 15px 0;
 }
 
 h4 {
@@ -77,4 +78,38 @@ small, .text_small {
 .fa-vuejs {
   font-size: 1.953em;
   margin: 1vh;
+}
+
+#play_box {
+  height: 30vh;
+  min-width: 600px;
+}
+
+#player1_box, #player2_box {
+  height: 90%;
+  width: 100%;
+  margin: 30px;
+  border: 1px black solid;
+  border-radius: 10px;
+  height: auto;
+  padding: 7px;
+}
+
+progress {
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+progress[value] {
+  width: 200px;
+}
+
+#player2_progress {
+  transform: rotate(180deg);
+}
+
+i {
+  font-size: 25px;
 }
