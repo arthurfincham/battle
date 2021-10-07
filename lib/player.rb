@@ -14,6 +14,12 @@ class Player
   end
 
   def take_damage
-    @health_points -= 10
+    @health_points -= random_damage_amount
+  end
+
+  private
+
+  def random_damage_amount
+    Kernel.rand(1..10)
   end
 end
