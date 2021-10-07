@@ -1,6 +1,7 @@
-<h1>Welcome <%= "#{@player1_name} & #{@player2_name}" %>!</h1>
+<%= @player1.name %> vs. <%= @player2.name %>
 
-<h2><%= "#{@player2_name}: #{@player2_hp}HP" %></h2>
+<%= @player2.name %>: <%= @player2.health_points %>HP
+
 <form action="/attack" method="get">
   <input type="submit" value="Attack">
 </form>
