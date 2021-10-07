@@ -1,8 +1,17 @@
 class Game
   attr_reader :current_turn, :players
+
   def initialize(player1, player2)
     @players = [player1, player2]
     @current_turn = player1
+  end
+
+  def self.create(player1, player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @game
   end
   
   def player1
