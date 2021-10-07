@@ -6,6 +6,6 @@ feature 'view hit points' do
 
   scenario 'see my own hit points' do
     sign_in_and_play
-    expect(page).to have_content 'Tom: 50HP'
+    expect(page).to have_content '50HP: Tom'
   end
-end
+end 

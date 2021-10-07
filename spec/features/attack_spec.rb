@@ -33,8 +33,8 @@ feature 'Attack' do
     scenario 'reduce player 1 HP by 10' do
       sign_in_and_play
       2.times{ attack_and_confirm }
-      expect(page).not_to have_content 'Tom: 50HP'
-      expect(page).to have_content 'Tom: 40HP'
+      expect(page).not_to have_content '50HP: Tom'
+      expect(page).to have_content '40HP: Tom'
     end
   end
 end
