@@ -25,6 +25,8 @@ class Player
       10
     when "right_hook"
       5
+    when "tek_for_testing"
+      50
     else
       raise("There has been a problem with submitting your technique.")
     end
