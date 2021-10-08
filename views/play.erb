@@ -1,5 +1,5 @@
-<div class="flex_row_center" id="play_box">
-  <div class="flex_col_center" id="player1_box">
+<div class="container">
+  <div class="flex_col_center block_box">
     <h3><%= @game.player1.name %></h3>
     <div class="flex_row_center">
       <i class="fas fa-skull-crossbones"></i>
@@ -8,17 +8,19 @@
     </div>
     <p><%= @game.player1.health_points %><span id="health_points"> HP</span></p>
   </div>
-  <div class="flex_col_center" id="player2_box">
-    <h3><%= @game.player2.name %></h3>
-    <div class="flex_row_center">
-      <i class="fas fa-heartbeat"></i>
-      <meter id="player2_meter" max="50" value="<%=@game.player2.health_points%>"></meter>
-      <i class="fas fa-skull-crossbones"></i>
-    </div>
-    <p><%= @game.player2.health_points %><span id="health_points"> HP</span></p>
-  </div>
 </div>
 
+
+<div class="container">
+<div class="block_box">
+<h1>arthur v tom</h1>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="block_box">
 <h4><%= @game.current_turn.name %>'s turn</h4>
 
 <form action="/attack" method="post" class="attack_toolbar flex_col_center">
@@ -39,4 +41,17 @@
   </div>
   <input type="submit" value="attack" id="playsubmitbutton">
 </form>
+</div>
+</div>
 
+<div class="container">
+  <div class="flex_col_center block_box">
+    <h3><%= @game.player2.name %></h3>
+    <div class="flex_row_center">
+      <i class="fas fa-heartbeat"></i>
+      <meter id="player2_meter" max="50" value="<%=@game.player2.health_points%>"></meter>
+      <i class="fas fa-skull-crossbones"></i>
+    </div>
+    <p><%= @game.player2.health_points %><span id="health_points"> HP</span></p>
+  </div>
+</div>

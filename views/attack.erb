@@ -1,3 +1,26 @@
+<div class="container">
+  <div class="flex_col_center block_box">
+    <h3><%= @game.player1.name %></h3>
+    <div class="flex_row_center">
+      <i class="fas fa-skull-crossbones"></i>
+      <meter class="vertical" max="50" value="<%=@game.player1.health_points%>"></meter>
+      <i class="fas fa-heartbeat"></i>
+    </div>
+    <p><%= @game.player1.health_points %><span id="health_points"> HP</span></p>
+  </div>
+</div>
+
+
+<div class="container">
+<div class="block_box">
+<h1>arthur v tom</h1>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="block_box">
 <% if @game.current_turn == @game.player1 %>
   <h3><%= @game.player1.name %> attacked <%= @game.player2.name%><br></h3>
 <% else %>
@@ -8,3 +31,17 @@
 <form action="/switch-turns" method="post">
   <input type="submit" value="OK" id="okbutton">
 </form>
+</div>
+</div>
+
+<div class="container">
+  <div class="flex_col_center block_box">
+    <h3><%= @game.player2.name %></h3>
+    <div class="flex_row_center">
+      <i class="fas fa-heartbeat"></i>
+      <meter id="player2_meter" max="50" value="<%=@game.player2.health_points%>"></meter>
+      <i class="fas fa-skull-crossbones"></i>
+    </div>
+    <p><%= @game.player2.health_points %><span id="health_points"> HP</span></p>
+  </div>
+</div>
