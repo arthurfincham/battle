@@ -4,14 +4,14 @@
     <div class="flex_row_center">
       <i class="fas fa-skull-crossbones"></i>
       <meter class="vertical" max="50" value="<%=@game.player1.health_points%>"></meter>
-      <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
+      <i class="fas fa-heartbeat"></i>
     </div>
     <p><%= @game.player1.health_points %><span id="health_points"> HP</span></p>
   </div>
   <div class="flex_col_center" id="player2_box">
     <h3><%= @game.player2.name %></h3>
     <div class="flex_row_center">
-      <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
+      <i class="fas fa-heartbeat"></i>
       <meter id="player2_meter" max="50" value="<%=@game.player2.health_points%>"></meter>
       <i class="fas fa-skull-crossbones"></i>
     </div>
@@ -23,15 +23,20 @@
 
 <form action="/attack" method="post" class="attack_toolbar flex_col_center">
   <div class="flex_row_center">
+
   <input type="radio" value="head_kick" id="head-kick" name="attack_type">
   <label for="head-kick">head kick</label>
+
   <input type="radio" value="body_kick" id="body-kick" name="attack_type">
   <label for="body-kick">body kick</label>
+
   <input type="radio" value="upper_cut" id="upper-cut" name="attack_type">
   <label for="upper-cut">upper cut</label>
+
   <input type="radio" value="right_hook" id="right-hook" name="attack_type">
   <label for="right-hook">right hook</label>
+
   </div>
-  <input type="submit" value="enter">
+  <input type="submit" value="attack">
 </form>
 
