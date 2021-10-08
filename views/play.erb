@@ -4,14 +4,14 @@
     <div class="flex_row_center">
       <i class="fas fa-skull-crossbones"></i>
       <progress class="vertical" max="50" value="<%=@game.player1.health_points%>"></progress>
-      <i class="fas fa-heartbeat"></i>
+      <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
     </div>
     <%= @game.player1.health_points %>HP
   </div>
   <div class="flex_col_center" id="player2_box">
     <h3><%= @game.player2.name %></h3>
     <div class="flex_row_center">
-      <i class="fas fa-heartbeat"></i>
+      <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
       <progress id="player2_progress" max="50" value="<%=@game.player2.health_points%>"></progress>
       <i class="fas fa-skull-crossbones"></i>
     </div>
