@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name
+  attr_reader :name, :take_damage
   attr_accessor :health_points
   
   DEFAULT_HP = 50
@@ -9,10 +9,6 @@ class Player
     @health_points = DEFAULT_HP
   end
 
-  def attack(player, technique)
-    player.take_damage(technique)
-  end
-
   def take_damage(technique)
     @health_points -= random_damage_amount(technique)
   end
@@ -20,14 +16,17 @@ class Player
   private
 
   def random_damage_amount(technique)
-    if 'head_kick'
-      10
-    elsif 'body_kick'
-      6
-    elsif 'upper_cut'
+    case technique
+    when "head_kick" 
+      15
+    when "body_kick" 
       8
+    when "upper_cut" 
+      10
+    when "right_hook"
+      5
     else
-      4
+      raise("There has been a problem with submitting your technique.")
     end
   end
 end

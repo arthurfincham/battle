@@ -1,26 +1,40 @@
 require 'player'
 
 describe Player do
-  subject(:arthur){ described_class.new("Arthur")}
-  subject(:tom){ described_class.new("Tom")}
-  
+  subject(:subject){ described_class.new("Arthur")}
+
+
   describe '#name' do
     it 'has a name' do
-      expect(arthur.name).to eq "Arthur"
+      expect(subject.name).to eq "Arthur"
     end
   end
 
   describe '#health_points' do
     it 'returns health points' do
-      expect(arthur.health_points).to eq described_class::DEFAULT_HP
+      expect(subject.health_points).to eq described_class::DEFAULT_HP
     end
   end
 
-  describe '#attack' do
+  describe '#taking damage' do
+    it 'head kick takes 15 HP' do
+      expect { subject.take_damage('head_kick') }.to change { subject.health_points }.by(-15)
+    end
 
-    it 'reduces the players health points' do
-      allow(Kernel).to receive(:rand).and_return(10)
-      expect { arthur.take_damage }.to change { arthur.health_points }.by(-10)
+    it 'body kick takes 8 HP' do
+      expect { subject.take_damage('body_kick') }.to change { subject.health_points }.by(-8)
+    end
+
+    it 'upper cut takes 10 HP' do
+      expect { subject.take_damage('upper_cut') }.to change { subject.health_points }.by(-10)
+    end
+
+    it 'right hook takes 5 HP' do
+      expect { subject.take_damage('right_hook') }.to change { subject.health_points }.by(-5)
+    end
+
+    it 'anything else throws an error' do
+      expect { subject.take_damage('randomthing') }.to raise_error("There has been a problem with submitting your technique.")
     end
   end
 end
