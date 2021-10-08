@@ -6,11 +6,12 @@ describe Game do
   let(:player1){ double :player, health_points: 50 }
   let(:player2){ double :player, health_points: 50 }
   let(:dead_player) { double :player, health_points: 0 }
+  let(:technique){ double :technique }
   
   describe "#attack" do
     it 'damages the player' do
       expect(subject.player2).to receive(:take_damage)
-      subject.attack(subject.player2)
+      subject.attack(subject.player2, technique)
     end
   end
 
