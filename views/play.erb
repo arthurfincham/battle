@@ -20,7 +20,18 @@
 </div>
 
 <h4><%= @game.current_turn.name %>'s turn</h4>
-<form action="/attack" method="post">
-  <input type="submit" value="attack">
+
+<form action="/attack" method="post" class="attack_toolbar flex_col_center">
+  <div class="flex_row_center">
+  <input type="radio" value="head_kick" id="head-kick" name="attack_type">
+  <label for="head-kick">head kick</label>
+  <input type="radio" value="body_kick" id="body-kick" name="attack_type">
+  <label for="body-kick">body kick</label>
+  <input type="radio" value="upper_cut" id="upper-cut" name="attack_type">
+  <label for="upper-cut">upper cut</label>
+  <input type="radio" value="right_hook" id="right-hook" name="attack_type">
+  <label for="right-hook">right hook</label>
+  </div>
+  <input type="submit" value="enter">
 </form>
 
