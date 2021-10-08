@@ -3,24 +3,24 @@
     <h3><%= @game.player1.name %></h3>
     <div class="flex_row_center">
       <i class="fas fa-skull-crossbones"></i>
-      <progress class="vertical" max="50" value="<%=@game.player1.health_points%>"></progress>
+      <meter class="vertical" max="50" value="<%=@game.player1.health_points%>"></meter>
       <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
     </div>
-    <%= @game.player1.health_points %>HP
+    <p><%= @game.player1.health_points %><span id="health_points"> HP</span></p>
   </div>
   <div class="flex_col_center" id="player2_box">
     <h3><%= @game.player2.name %></h3>
     <div class="flex_row_center">
       <i class="fas fa-heartbeat animate__animated animate__pulse animate__infinite"></i>
-      <progress id="player2_progress" max="50" value="<%=@game.player2.health_points%>"></progress>
+      <meter id="player2_meter" max="50" value="<%=@game.player2.health_points%>"></meter>
       <i class="fas fa-skull-crossbones"></i>
     </div>
-    <%= @game.player2.health_points %>HP
+    <p><%= @game.player2.health_points %><span id="health_points"> HP</span></p>
   </div>
 </div>
 
-<h4><%= @game.current_turn.name %>'s turn<h4>
+<h4><%= @game.current_turn.name %>'s turn</h4>
 <form action="/attack" method="post">
-  <input type="submit" value="Attack">
+  <input type="submit" value="attack">
 </form>
 
