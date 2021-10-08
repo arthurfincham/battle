@@ -43,7 +43,7 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     @technique = Technique.instance
-    @game.attack(@game.opponent_of(@game.current_turn), @technique)
+    @game.attack(@game.opponent_of(@game.current_turn), @technique.move.name)
     erb(:attack)
   end
 
