@@ -184,25 +184,23 @@ textarea:focus {
   padding: 0 7px 10px 5px;
   line-height: 30px;
   background-color: rgb(255, 236, 218);
-  position: relative;
-  animation-name: shake;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  cursor: pointer;
 }
 
 .attack_toolbar input[type="radio"]:checked+label {
-  border: 5px dashed black;
-  animation: none;
+  border: 4px solid black;
+  animation: none !important;
 }
 
-.attack_toolbar input[type="radio"]:focus+label {
-  border: 2px dashed #444;
+.attack_toolbar input[type="radio"]+label:hover {
+  animation: shake;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
-.attack_toolbar label:hover {
-  border: 2px dashed black;
+.submit_animation {
+  animation: shake;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
