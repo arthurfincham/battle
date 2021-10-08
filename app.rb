@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require './lib/player.rb'
 require './lib/game.rb'
+require './lib/technique.rb'
+require './lib/move.rb'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -30,6 +32,8 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
+    move = Move.new(params[:attack_type])
+    @technique = Technique.create(move)
     if @game.game_over?
       redirect '/game-over'
     else
@@ -38,7 +42,8 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    @game.attack(@game.opponent_of(@game.current_turn))
+    @technique = Technique.instance
+    @game.attack(@game.opponent_of(@game.current_turn), @technique)
     erb(:attack)
   end
 
