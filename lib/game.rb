@@ -22,8 +22,8 @@ class Game
     @players.last
   end
   
-  def attack(player)
-    player.take_damage
+  def attack(player, technique)
+    player.take_damage(technique)
   end
   
   def switch_turns
