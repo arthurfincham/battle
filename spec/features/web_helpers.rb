@@ -5,7 +5,8 @@ def sign_in_and_play
   click_button "enter"
 end
 
-def attack_and_confirm
+def attack_and_confirm(technique)
+  choose(technique, allow_label_click: true)
   click_button "attack"
   click_button "OK"
 end
