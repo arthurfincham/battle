@@ -4,7 +4,7 @@ feature 'end of game' do
     attack_and_confirm
     allow(Kernel).to receive(:rand).and_return(50)
     attack_and_confirm
-    click_button "Attack"
+    click_button "attack"
     expect(page).to have_content 'Tom loses!'
   end
 end
