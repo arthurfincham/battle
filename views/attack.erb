@@ -24,9 +24,9 @@
 <div class="container">
 <div class="block_box">
 <% if @game.current_turn == @game.player1 %>
-  <h3><%= @game.player1.name %> attacked <%= @game.player2.name%><br></h3>
+  <h4><%= @game.player1.name %> attacked <%= @game.player2.name%><br></h4>
 <% else %>
-  <h3><%= @game.player2.name %> attacked <%= @game.player1.name%><br></h3>
+  <h4><%= @game.player2.name %> attacked <%= @game.player1.name%><br></h4>
 <% end %>
 
 

@@ -17,7 +17,7 @@ class Player
 
   def random_damage_amount(technique)
     case technique
-    when "head_kick" 
+    when "head_kick"
       15
     when "body_kick" 
       8

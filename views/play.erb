@@ -23,7 +23,7 @@
 
 <div class="container">
 <div class="block_box">
-<h4><%= @game.current_turn.name %>'s turn</h4>
+<h4 id="playerturn"><%= @game.current_turn.name %>'s turn</h4>
 
 <form action="/attack" method="post" class="attack_toolbar flex_col_center">
   <div class="flex_row_center">
