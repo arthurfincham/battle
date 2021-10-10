@@ -2,11 +2,11 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "airlight";
+  font-family: "airbold";
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
-  background-color: rgb(255, 217, 182);
+  color: #1d3557;
+  background-color: rgb(167, 149, 229);
 }
 
 .container {
@@ -24,10 +24,11 @@ html, body {
   src: url("fonts/air_mitalic.ttf");
 }
 
+/* 
 @font-face {
-  font-family: "airlight";
+  font-family: "airbold";
   src: url("fonts/airmill_o.ttf");
-}
+} */
 
 /* #region  FONT */
 
@@ -41,20 +42,32 @@ p {
 }
 
 #health_points {
-  font-family: "airlight";
+  font-family: "airbold";
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .6px 1.2px #1d3557;
 }
 
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
   font-weight: 400;
   line-height: 1.3;
-  color: black;
+  color: #1d3557;
 }
 
 h1 {
   margin-top: 0;
   font-size: 5.052rem;
   padding: 5px;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: 1px 2px #1d3557;
 }
 
 h2 {
@@ -62,14 +75,26 @@ h2 {
 }
 
 h3 {
-  font-family: 'airlight';
+  font-family: 'airbold';
   font-size: 80px;
   margin: 0 0 15px 0;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: 1px 2px #1d3557;
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .7px 1.2px #1d3557;
 }
 
 /* #endregion */
@@ -100,15 +125,21 @@ h4 {
 
 #versus {
   margin: 15px 20px 15px 15px;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: #f1faee;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: 1px 2px #1d3557;
 }
 
 .block_box {
   height: 70%;
   width: 70%;
-  border: 5px black solid;
+  border: 5px #1d3557 solid;
   border-radius: 10px;
   padding: 15px;
-  background-color: rgb(255, 236, 218);
+  background-color: #a8dadc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,13 +173,19 @@ i {
 
 input[type="submit"] {
   font-size: 50px;
-  font-family: "airlight";
-  border: 2px solid black;
+  font-family: "airbold";
+  border: 2px solid #1d3557;
   border-radius: 5px;
   padding: 0 7px 10px 5px;
   line-height: 30px;
-  background-color: rgb(255, 236, 218);
+  background-color: rgb(167, 149, 229);
   margin-top: 15px;
+  color: white;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .7px 1.2px #1d3557;
 }
 
 #okbutton {
@@ -159,20 +196,20 @@ input[type="text"] {
   height: 30px;
   width: 250px;
   font-size: 20px;
-  background-color: rgb(255, 236, 218);
+  background-color: #f1faee;
   border: none;
   border-radius: 5px;
 }
 
 input:focus {
   outline: none !important;
-  border: 2px solid black;
+  border: 2px solid #1d3557;
 }
 
 textarea:focus {
   outline: none !important;
   border-color: #ddb662;
-  border: 2px solid black;
+  border: 2px solid #1d3557;
 }
 
 .attack_toolbar>*>* {
@@ -188,16 +225,22 @@ textarea:focus {
 .attack_toolbar label {
   display: inline-block;
   font-size: 40px;
-  font-family: "airlight";
-  border: 2px solid black;
+  font-family: "airbold";
+  border: 2px solid #1d3557;
   border-radius: 5px;
   padding: 0 7px 10px 5px;
   line-height: 30px;
-  background-color: rgb(255, 236, 218);
+  background-color: rgb(167, 149, 229);
+  color: white;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .7px 1.2px #1d3557;
 }
 
 .attack_toolbar input[type="radio"]:checked+label {
-  border: 4px solid black;
+  border: 4px solid #1d3557;
   animation: none !important;
 }
 
@@ -228,7 +271,7 @@ textarea:focus {
 
 #playerturn {
   margin: 0;
-  margin-bottom: auto;
+  margin-bottom: 15px !important;
 }
 
 @keyframes shake {
@@ -304,9 +347,57 @@ textarea:focus {
 
 #resultspage {
   width: auto;
+  height: auto;
   min-width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+#actionbox, #actionbox_attack {
+  background-color: #a8dadc;
+}
+
+#actionbox>h4 {
+  font-size: 70px !important;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .7px 1.5px #1d3557;
+}
+
+#actionbox_attack>h4 {
+  font-size: 60px !important;
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: rgb(167, 149, 229);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: .7px 1.5px #1d3557;
+}
+
+.startovertext {
+  margin: 0px;
+  font-size: 60px;
+  color: #88bcc0;
+  animation: fadeIn;
+  animation-duration: 5s;
+}
+
+#resultslink {
+  height: 100vh;
+  width: 100vw;
+}
+
+#welcome_page>h1 {
+  color: rgb(167, 149, 229);
+  -webkit-text-fill-color: #f1faee;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1d3557;
+  text-shadow: 1px 2px #1d3557;
 }
