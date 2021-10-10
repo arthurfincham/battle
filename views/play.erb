@@ -12,7 +12,7 @@
 
 
 <div class="container">
-<div class="block_box" id="versus_in_game">
+<div class="block_box gradient-text" id="versus_in_game">
 <h1><%=@game.player1.name%></h1>
 <h1>v</h1>
 <h1><%=@game.player2.name%></h1>
@@ -22,8 +22,8 @@
 
 
 <div class="container">
-<div class="block_box">
-<h4 id="playerturn"><%= @game.current_turn.name %>'s turn</h4>
+<div class="block_box" id="actionbox">
+<h4 id="playerturn"><%= @game.current_turn.name %></h4>
 
 <form action="/attack" method="post" class="attack_toolbar flex_col_center">
   <div class="flex_row_center">

@@ -22,7 +22,7 @@
 
 
 <div class="container">
-<div class="block_box">
+<div class="block_box" id="actionbox_attack">
 <% if @game.current_turn == @game.player1 %>
   <h4><%= @game.player1.name %> attacked <%= @game.player2.name%><br></h4>
 <% else %>
